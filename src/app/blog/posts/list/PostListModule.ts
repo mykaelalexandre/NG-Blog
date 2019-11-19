@@ -1,13 +1,12 @@
 import { NgModule } from "@angular/core";
 import { PostListComponent } from './PostListComponent';
-import {MatCardModule, MatButtonModule} from '@angular/material'
 import { CommonModule } from '@angular/common';
+import { CommonMaterialModules } from 'src/app/common/material/CommonMaterialModules';
 
 @NgModule({
     imports:[
-        MatCardModule,
-        MatButtonModule,
-        CommonModule
+        CommonModule,
+        CommonMaterialModules
     ],
     exports:[
         PostListComponent

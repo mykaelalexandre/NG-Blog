@@ -4,24 +4,24 @@ import {AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BlogModule } from './blog/BlogModule';
 import {RouterModule} from '@angular/router';
-import {MatCardModule, MatButtonModule, MatToolbar, MatToolbarModule, MatIcon, MatIconModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { CommonMaterialModules } from './common/material/CommonMaterialModules';
+import { MatToolbarModule } from '@angular/material';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule,
-    MatButtonModule,
     MatToolbarModule,
-    MatIconModule,
+    CommonMaterialModules,
+    BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    MatCardModule,
     BlogModule,
     RouterModule.forRoot([]),
   ],
   exports:[
-    MatCardModule
  ],
   providers: [],
   bootstrap: [AppComponent]

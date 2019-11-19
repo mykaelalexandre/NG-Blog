@@ -1,21 +1,17 @@
 import {NgModule} from '@angular/core';
-import { PostListModule } from './list/PostListModule';
-import { PostService } from './services/PostService';
-import { PostResource } from './services/PostResource';
+import { HttpClientModule } from '@angular/common/http';
+import { PostModule } from './posts/PostModule';
 
 @NgModule({
     imports:[
-        PostListModule
+        PostModule,
+        HttpClientModule,
     ],
     exports:[
-        PostListModule
+        PostModule,
     ],
     declarations:[
 
-    ],
-    providers:[
-        PostService,
-        PostResource
     ],
 })
 

@@ -1,0 +1,30 @@
+import { NgModule } from "@angular/core";
+import { PostListModule } from './list/PostListModule';
+import { PostResource } from './services/PostResource';
+import { PostService } from './services/PostService';
+import { CreatePostDialogComponent } from './dialogs/CratePostDialogComponent';
+import { CommonMaterialModules } from 'src/app/common/material/CommonMaterialModules';
+
+@NgModule({
+    imports: [
+        PostListModule,
+        CommonMaterialModules,
+    ],
+    exports:[
+        PostListModule
+    ],
+    declarations:[
+        CreatePostDialogComponent
+    ],
+    entryComponents:[
+       CreatePostDialogComponent 
+    ],
+    providers:[
+        PostService,
+        PostResource,
+    ],
+})
+
+export class PostModule{
+
+}
