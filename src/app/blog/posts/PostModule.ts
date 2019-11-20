@@ -4,11 +4,15 @@ import { PostResource } from './services/PostResource';
 import { PostService } from './services/PostService';
 import { CreatePostDialogComponent } from './dialogs/CratePostDialogComponent';
 import { CommonMaterialModules } from 'src/app/common/material/CommonMaterialModules';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     imports: [
         PostListModule,
         CommonMaterialModules,
+        FormsModule,
+        CommonModule,
     ],
     exports:[
         PostListModule

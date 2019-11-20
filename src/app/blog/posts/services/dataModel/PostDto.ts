@@ -1,4 +1,4 @@
-export interface PostListItem{
+export interface PostDto{
     ID: number;
     title: string;
     subTitle:string;
