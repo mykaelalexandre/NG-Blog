@@ -14,7 +14,6 @@ import { PostService } from '../posts/services/PostService';
         <button mat-button mat-dialog-close>Cancel</button>
         <button mat-button
                 type="button"
-                (click)="submit()"
                 color="warn">
             Continue
         </button>
@@ -32,9 +31,10 @@ export class ConfirmationDialogComponent {
         ) {
     }
 
-    public submit(){
-        console.log(this.data.postId);
-        this.postService.deletePost(this.data.postId.id);
-        this.dialogref.close(true); 
-    }
+    // public submit(){
+        
+    //     console.log('data dialog', this.data);
+    //     this.postService.deletePost(this.data.postId.id);
+    //     this.dialogref.close(true); 
+    // }
 }

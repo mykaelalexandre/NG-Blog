@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-12">
       <ng-container *ngIf="(getPostList() | async) as postListItems;">
-        <table mat-table [dataSource]="postList" class=" w-100 mat-elevation-z8 post-list-table">
+        <table mat-table [dataSource]="postListItems" class=" w-100 mat-elevation-z8 post-list-table">
       
       
           <!-- Position Column -->

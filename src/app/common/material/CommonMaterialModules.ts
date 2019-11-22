@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MatCardModule, MatButtonModule, MatTableModule, MatIconModule, MatProgressBarModule, MatTooltipModule, MatDialogModule, MatInputModule, MatFormFieldModule, MatFormField,  } from '@angular/material';
+import { MatCardModule, MatButtonModule, MatTableModule, MatIconModule, MatProgressBarModule, MatTooltipModule, MatDialogModule, MatInputModule, MatFormFieldModule, MatFormField, MAT_DIALOG_DEFAULT_OPTIONS,  } from '@angular/material';
 
 
 @NgModule({
@@ -26,6 +26,6 @@ import { MatCardModule, MatButtonModule, MatTableModule, MatIconModule, MatProgr
         MatTooltipModule,
     ],
     declarations: [],
-    providers: [],
+    providers: [ {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
 })
 export class CommonMaterialModules { }

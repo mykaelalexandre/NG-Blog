@@ -54,19 +54,20 @@ export class PostListComponent implements OnInit {
     }
 
     public deletePost(postDto: PostDto) {
-        const ref = this.matDialog.open(ConfirmationDialogComponent);
-
-        ref.afterClosed().subscribe((canContinue) => {
-            if (canContinue) {
+        console.log(`POST DELETE`, postDto);
+        const ref = this.matDialog.open(ConfirmationDialogComponent, {data: postDto.ID});
+        ref.afterClosed().subscribe((result) => {
+            console.log('CONTINUAR', result);
+            if (result) {
                 this.isLoading = true;
-                this.postService.deletePost(postDto.ID)
-                    .pipe(finalize(() => this.isLoading = false))
-                    .subscribe(() => {
-                        const list = this.postListSubject.getValue();
-                        _.remove(list, post => post.ID === postDto.ID);
-                        this.postListSubject.next(_.cloneDeep(list));
+                // this.postService.deletePost(postDto.ID)
+                //     .pipe(finalize(() => this.isLoading = false))
+                //     .subscribe(() => {
+                //         const list = this.postListSubject.getValue();
+                //         _.remove(list, post => post.ID === postDto.ID);
+                //         this.postListSubject.next(_.cloneDeep(list));
 
-                    });
+                //     });
             }
         });
     }
